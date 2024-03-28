@@ -40,10 +40,6 @@ android {
         viewBinding = true
     }
 
-    // 데이터 바인딩
-    dataBinding {
-        enable = true
-    }
 
 }
 

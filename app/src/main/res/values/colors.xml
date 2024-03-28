@@ -4,6 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="pink">#FFCDD2</color>
     <color name="textpink">#9F3C66</color>
+    <color name="backgroundPink">#80FDD5D9</color>
 
 
 </resources>
