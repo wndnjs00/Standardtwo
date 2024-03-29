@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView
 class DonutAdapter(private val donutList : ArrayList<DonutDataModel>)
     : RecyclerView.Adapter<DonutAdapter.DonutViewHolder>(){
 
+        var onItemClick : ((DonutDataModel) -> Unit)? = null
+
 
     class DonutViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
 
@@ -46,6 +48,13 @@ class DonutAdapter(private val donutList : ArrayList<DonutDataModel>)
         holder.image.setImageResource(donut.image)
         holder.title.text = donut.title
         holder.price.text = donut.price
+
+
+        // 리사이클러뷰 아이템 클릭시
+        holder.itemView.setOnClickListener {
+            onItemClick?.invoke(donut)
+        }
+
 
     }
 

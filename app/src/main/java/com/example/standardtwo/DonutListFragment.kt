@@ -1,5 +1,6 @@
 package com.example.standardtwo
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -41,6 +42,12 @@ class DonutListFragment : Fragment() {
         donutAdapter = DonutAdapter(donutList)
         binding.rv.adapter = donutAdapter     // 리사이클러뷰와 어뎁터 연결
 
+
+        // 아이템 클릭시
+        donutAdapter.onItemClick = {
+            val intent = Intent(context, DonutDetailActivity::class.java)
+            startActivity(intent)
+        }
 
         // 한줄에 2개씩
         binding.rv.layoutManager = GridLayoutManager(context,2)
