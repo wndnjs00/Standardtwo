@@ -17,10 +17,11 @@ class DonutAdapter(private val donutList : ArrayList<DonutDataModel>)
 
     class DonutViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
 
-        // 레이아웃 연결
-        val image : ImageView = itemView.findViewById(R.id.donut1)
-        val title : TextView = itemView.findViewById(R.id.item_title)
-        val price : TextView = itemView.findViewById(R.id.item_price)
+        // 레이아웃 id 가져옴
+//        val image : ImageView = itemView.findViewById(R.id.donut1)        // 이렇게 써도됨
+        val image = itemView.findViewById<ImageView>(R.id.donut1)
+        val title = itemView.findViewById<TextView>(R.id.item_title)
+        val price = itemView.findViewById<TextView>(R.id.item_price)
 
     }
 
@@ -44,7 +45,7 @@ class DonutAdapter(private val donutList : ArrayList<DonutDataModel>)
 
         val donut = donutList[position]
 
-        // 데이터모델과 레이아웃 연결
+        // 레이아웃과 데이터모델 연결
         holder.image.setImageResource(donut.image)
         holder.title.text = donut.title
         holder.price.text = donut.price
