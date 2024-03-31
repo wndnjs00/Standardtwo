@@ -192,11 +192,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="4 cups wheat flour (tea)
-        \n250 ml of milk\n2 units of eggs
-        \n1/2 cup of butter
-        \n4 tablespoons sugar 1 teaspoon salt
-        \n1 sachet of dry biological yeast (10g)"
+        android:text="@string/ingredient"
         android:textSize="18sp"
         android:textColor="#0A0004"
         android:layout_marginTop="10dp"
