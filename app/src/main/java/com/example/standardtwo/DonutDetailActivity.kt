@@ -24,6 +24,9 @@ class DonutDetailActivity : AppCompatActivity() {
         val empty_heart = findViewById<ImageView>(R.id.heart1)
         val full_heart = findViewById<ImageView>(R.id.heart2)
 
+        val no_btn = findViewById<ImageView>(R.id.noBtn)
+
+
 
         // bundle을 사용해서 DonutListFragment에서 보낸  데이터 받아오기
         val bundle = intent.extras
@@ -54,7 +57,10 @@ class DonutDetailActivity : AppCompatActivity() {
             full_heart.visibility = View.GONE
         }
 
-
+        // 엑스버튼 클릭시
+        no_btn.setOnClickListener {
+            finish()
+        }
 
     }
 
