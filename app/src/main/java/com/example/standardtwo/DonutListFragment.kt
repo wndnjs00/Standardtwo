@@ -34,8 +34,8 @@ class DonutListFragment : Fragment() {
         donutList.add(DonutDataModel(R.drawable.donut2, "Strawberry donut", "R$ 9,89"))
         donutList.add(DonutDataModel(R.drawable.donut3, "Almond donut", "R$ 9,79"))
         donutList.add(DonutDataModel(R.drawable.donut4, "Chocolate donut", "R$ 9,95"))
-        donutList.add(DonutDataModel(R.drawable.donut5, "Strawberry donut", "R$ 9,93"))
-        donutList.add(DonutDataModel(R.drawable.donut6, "Strawberry donut", "R$ 9,96"))
+        donutList.add(DonutDataModel(R.drawable.donut5, "Cookie donut", "R$ 9,93"))
+        donutList.add(DonutDataModel(R.drawable.donut6, "Glazed donut", "R$ 9,96"))
 
 
         val donutAdapter = DonutAdapter(donutList)
