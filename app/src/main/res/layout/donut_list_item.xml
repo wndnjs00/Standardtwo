@@ -63,13 +63,23 @@
 
 
     <ImageView
-        android:id="@+id/heart"
+        android:id="@+id/item_heart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="@+id/background_gray"
         app:layout_constraintTop_toBottomOf="@+id/item_title"
         app:srcCompat="@drawable/heart" />
+
+    <ImageView
+        android:id="@+id/item_heart2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/background_gray"
+        app:layout_constraintTop_toBottomOf="@+id/item_title"
+        android:visibility="gone"
+        app:srcCompat="@drawable/heart2" />
 
 
 

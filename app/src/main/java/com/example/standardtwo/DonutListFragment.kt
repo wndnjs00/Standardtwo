@@ -42,7 +42,7 @@ class DonutListFragment : Fragment() {
         binding.rv.adapter = donutAdapter     // 리사이클러뷰와 어뎁터 연결
 
 
-        // 아이템 클릭시
+        // 리스트 아이템 클릭시
         donutAdapter.onItemClick = {
             val intent = Intent(context, DonutDetailActivity::class.java)
 
@@ -53,7 +53,6 @@ class DonutListFragment : Fragment() {
 
             startActivity(intent)
         }
-
 
 
         // 한줄에 아이템 2개씩

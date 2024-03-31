@@ -227,7 +227,7 @@
         app:srcCompat="@drawable/button_radius_pink2" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/heart1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
@@ -235,6 +235,17 @@
         app:layout_constraintStart_toStartOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="@+id/imageView3"
         app:srcCompat="@drawable/heart1_1" />
+
+    <ImageView
+        android:id="@+id/heart2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        android:visibility="gone"
+        app:srcCompat="@drawable/heart2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
