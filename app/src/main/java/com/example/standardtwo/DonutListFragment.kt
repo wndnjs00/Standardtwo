@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.standardtwo.databinding.FragmentDonutListBinding
@@ -40,15 +42,22 @@ class DonutListFragment : Fragment() {
         donutList.add(DonutDataModel(R.drawable.donut6, "Strawberry donut", "R$ 9,96"))
 
 
-        donutAdapter = DonutAdapter(donutList)
+        val donutAdapter = DonutAdapter(donutList)
         binding.rv.adapter = donutAdapter     // 리사이클러뷰와 어뎁터 연결
 
 
         // 아이템 클릭시
         donutAdapter.onItemClick = {
             val intent = Intent(context, DonutDetailActivity::class.java)
+
+            // DonutDetailActivity로 image, title, price 정보 넘겨주기
+            intent.putExtra("image", it.image)
+            intent.putExtra("title", it.title)
+            intent.putExtra("price", it.price)
+
             startActivity(intent)
         }
+
 
 
         // 한줄에 아이템 2개씩

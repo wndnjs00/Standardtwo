@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         // 버튼 클릭시
         binding.button.setOnClickListener {
             // frameLayout에 DonutListFragment연결
