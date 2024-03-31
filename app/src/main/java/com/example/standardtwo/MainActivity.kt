@@ -1,10 +1,7 @@
 package com.example.standardtwo
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.standardtwo.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         // 뷰바인딩 사용(초기화해줌)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         // 버튼 클릭시
         binding.button.setOnClickListener {

@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.standardtwo.databinding.FragmentDonutListBinding
 
 class DonutListFragment : Fragment() {
@@ -15,14 +14,13 @@ class DonutListFragment : Fragment() {
     private lateinit var binding: FragmentDonutListBinding
 
     private lateinit var donutList : ArrayList<DonutDataModel>
-    private lateinit var donutAdapter : DonutAdapter
 
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         // 뷰바인딩
         binding = FragmentDonutListBinding.inflate(inflater, container, false)
@@ -40,15 +38,22 @@ class DonutListFragment : Fragment() {
         donutList.add(DonutDataModel(R.drawable.donut6, "Strawberry donut", "R$ 9,96"))
 
 
-        donutAdapter = DonutAdapter(donutList)
+        val donutAdapter = DonutAdapter(donutList)
         binding.rv.adapter = donutAdapter     // 리사이클러뷰와 어뎁터 연결
 
 
         // 아이템 클릭시
         donutAdapter.onItemClick = {
             val intent = Intent(context, DonutDetailActivity::class.java)
+
+            // DonutDetailActivity로 image, title, price 정보 넘겨주기
+            intent.putExtra("image", it.image)
+            intent.putExtra("title", it.title)
+            intent.putExtra("price", it.price)
+
             startActivity(intent)
         }
+
 
 
         // 한줄에 아이템 2개씩
