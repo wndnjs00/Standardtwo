@@ -20,10 +20,6 @@ class DonutDetailActivity : AppCompatActivity() {
         val detail_image = findViewById<ImageView>(R.id.donut_img)
 
 
-//        val title = intent.getStringExtra("title")
-//        val price = intent.getStringExtra("price")
-//        val image = intent.getStringExtra("image")
-
         // bundle을 사용해서 데이터 받아오기
         val bundle = intent.extras
         val title = bundle?.getString("title")
@@ -38,8 +34,6 @@ class DonutDetailActivity : AppCompatActivity() {
         Glide.with(this)
             .load(image)
             .into(detail_image)
-
-//        detail_image.setImageResource(image)
 
 
 
