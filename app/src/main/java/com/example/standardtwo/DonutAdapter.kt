@@ -23,6 +23,9 @@ class DonutAdapter(private val donutList : ArrayList<DonutDataModel>)
         val title = itemView.findViewById<TextView>(R.id.item_title)
         val price = itemView.findViewById<TextView>(R.id.item_price)
 
+        val empty_heart1 = itemView.findViewById<ImageView>(R.id.item_heart)
+        val full_heart1 = itemView.findViewById<ImageView>(R.id.item_heart2)
+
     }
 
 
@@ -46,9 +49,9 @@ class DonutAdapter(private val donutList : ArrayList<DonutDataModel>)
         val donut = donutList[position]
 
         // 레이아웃과 데이터모델 연결
-        holder.image.setImageResource(donut.image)
         holder.title.text = donut.title
         holder.price.text = donut.price
+        holder.image.setImageResource(donut.image)
 
 
         // 리사이클러뷰 아이템 클릭시
@@ -56,6 +59,18 @@ class DonutAdapter(private val donutList : ArrayList<DonutDataModel>)
             onItemClick?.invoke(donut)
         }
 
+
+        // 리사이클러뷰 아이템 빈하트 클릭시
+        holder.empty_heart1.setOnClickListener {
+            holder.empty_heart1.visibility = View.GONE
+            holder.full_heart1.visibility = View.VISIBLE
+        }
+
+        // 채워진하트 클릭시
+        holder.full_heart1.setOnClickListener {
+            holder.empty_heart1.visibility = View.VISIBLE
+            holder.full_heart1.visibility = View.GONE
+        }
 
     }
 
