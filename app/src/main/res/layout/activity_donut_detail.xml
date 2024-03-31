@@ -27,7 +27,7 @@
         android:src="@drawable/donut1"/>
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/noBtn"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginTop="15dp"
@@ -150,7 +150,7 @@
         style="@style/informationTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="404kal"
+        android:text="404kcal"
         android:layout_marginTop="7dp"
         app:layout_constraintEnd_toEndOf="@+id/information3"
         app:layout_constraintStart_toStartOf="@+id/information3"
