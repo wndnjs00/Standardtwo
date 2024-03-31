@@ -6,10 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.standardtwo.databinding.FragmentDonutListBinding
 
 class DonutListFragment : Fragment() {
@@ -17,14 +14,13 @@ class DonutListFragment : Fragment() {
     private lateinit var binding: FragmentDonutListBinding
 
     private lateinit var donutList : ArrayList<DonutDataModel>
-    private lateinit var donutAdapter : DonutAdapter
 
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         // 뷰바인딩
         binding = FragmentDonutListBinding.inflate(inflater, container, false)
