@@ -1,33 +1,8 @@
 <resources>
     <string name="app_name">Standardtwo</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="ingredient">4 cups wheat flour (tea) \n250 ml of milk\n2 units of eggs \n1/2 cup of butter \n4 tablespoons sugar 1 teaspoon salt \n1 sachet of dry biological yeast (10g)</string>
 
-
-    <!--스타일 설정-->
-    <style name="TextStyle">
-
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">22sp</item>
-    </style>
-
-
-    <style name="TextPurple">
-
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/purple</item>
-        <item name="android:textSize">22sp</item>
-    </style>
-
-
-    <style name="informationTv">
-
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/purple</item>
-        <item name="android:textSize">24sp</item>
-    </style>
 
 
 </resources>

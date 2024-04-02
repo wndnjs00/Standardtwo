@@ -2,12 +2,5 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="pink">#FFCDD2</color>
-    <color name="textpink">#9F3C66</color>
-    <color name="backgroundPink">#80FDD5D9</color>
-    <color name="purple">#3E061D</color>
-    <color name="btn_purple">#9F3C66</color>
-    <color name="pink2">#FFDAE9</color>
-
-
+    
 </resources>
