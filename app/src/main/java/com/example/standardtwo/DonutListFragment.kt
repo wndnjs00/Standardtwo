@@ -23,7 +23,6 @@ class DonutListFragment : Fragment() {
         // 뷰바인딩
         binding = FragmentDonutListBinding.inflate(inflater, container, false)
 
-
         // 리스트 초기화
         val List = donutList(resources)
 
