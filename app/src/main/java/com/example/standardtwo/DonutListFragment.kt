@@ -27,6 +27,13 @@ class DonutListFragment : Fragment() {
         val List = donutList(resources)
 
 
+
+
+
+
+
+
+
         val donutAdapter = DonutAdapter(List)
         binding.rv.adapter = donutAdapter     // 리사이클러뷰와 어뎁터 연결
 
