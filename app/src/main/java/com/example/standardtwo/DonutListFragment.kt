@@ -1,6 +1,7 @@
 package com.example.standardtwo
 
 import android.content.Intent
+import android.content.res.Resources
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,9 +14,6 @@ class DonutListFragment : Fragment() {
 
     private lateinit var binding: FragmentDonutListBinding
 
-    private lateinit var donutList : ArrayList<DonutDataModel>
-
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,18 +25,10 @@ class DonutListFragment : Fragment() {
 
 
         // 리스트 초기화
-        donutList = ArrayList()
-
-        // donutList에 데이터추가
-        donutList.add(DonutDataModel(R.drawable.donut1, "Little chicken", "R$ 9,99"))
-        donutList.add(DonutDataModel(R.drawable.donut2, "Strawberry donut", "R$ 9,89"))
-        donutList.add(DonutDataModel(R.drawable.donut3, "Almond donut", "R$ 9,79"))
-        donutList.add(DonutDataModel(R.drawable.donut4, "Chocolate donut", "R$ 9,95"))
-        donutList.add(DonutDataModel(R.drawable.donut5, "Strawberry donut", "R$ 9,93"))
-        donutList.add(DonutDataModel(R.drawable.donut6, "Strawberry donut", "R$ 9,96"))
+        val List = donutList(resources)
 
 
-        val donutAdapter = DonutAdapter(donutList)
+        val donutAdapter = DonutAdapter(List)
         binding.rv.adapter = donutAdapter     // 리사이클러뷰와 어뎁터 연결
 
 
@@ -63,5 +53,41 @@ class DonutListFragment : Fragment() {
 
     }
 
+
+    fun donutList(resources: Resources) : ArrayList<DonutDataModel>{
+
+        return arrayListOf(
+            DonutDataModel(
+                image = R.drawable.donut1,
+                title = "Little chicken",
+                price = "R$ 9,99"
+            ),
+            DonutDataModel(
+                image = R.drawable.donut2,
+                title = "Strawberry donut",
+                price = "R$ 9,89"
+            ),
+            DonutDataModel(
+                image = R.drawable.donut3,
+                title = "Almond donut",
+                price = "R$ 9,79"
+            ),
+            DonutDataModel(
+                image = R.drawable.donut4,
+                title = "Chocolate donut",
+                price = "R$ 9,95"
+            ),
+            DonutDataModel(
+                image = R.drawable.donut5,
+                title = "Strawberry donut",
+                price = "R$ 9,93"
+            ),
+            DonutDataModel(
+                image = R.drawable.donut6,
+                title = "Strawberry donut",
+                price = "R$ 9,96"
+            ),
+        )
+    }
 
 }

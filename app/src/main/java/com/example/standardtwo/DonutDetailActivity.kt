@@ -43,6 +43,9 @@ class DonutDetailActivity : AppCompatActivity() {
             .load(image)
             .into(detail_image)
 
+//        if (image != null) {
+//            detail_image.setImageResource(image)
+//        }
 
 
         // 빈하트 클릭시
