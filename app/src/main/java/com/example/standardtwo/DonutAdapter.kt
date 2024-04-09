@@ -13,7 +13,11 @@ import com.example.standardtwo.databinding.DonutListItemBinding
 class DonutAdapter(private val donutList : ArrayList<DonutDataModel>)
     : RecyclerView.Adapter<DonutAdapter.DonutViewHolder>(){
 
-        var onItemClick : ((DonutDataModel) -> Unit)? = null
+    interface ItemClick{
+        fun onClick(view : View, position: Int)
+    }
+
+    var itemClick : ItemClick? = null
 
 
 
@@ -44,7 +48,7 @@ class DonutAdapter(private val donutList : ArrayList<DonutDataModel>)
 
         // 리사이클러뷰 아이템 클릭시
         holder.itemView.setOnClickListener {
-            onItemClick?.invoke(donut)
+            itemClick?.onClick(it, position)
         }
 
 

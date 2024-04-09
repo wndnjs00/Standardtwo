@@ -30,15 +30,18 @@ class DonutListFragment : Fragment() {
 
 
         // 리스트 아이템 클릭시
-        donutAdapter.onItemClick = {
-            val intent = Intent(context, DonutDetailActivity::class.java)
+        donutAdapter.itemClick = object : DonutAdapter.ItemClick{
 
-            // DonutDetailActivity로 image, title, price 정보 넘겨주기
-            intent.putExtra("image", it.image)
-            intent.putExtra("title", it.title)
-            intent.putExtra("price", it.price)
+            override fun onClick(view: View, position: Int) {
+                val intent = Intent(context, DonutDetailActivity::class.java)
 
-            startActivity(intent)
+                // DonutDetailActivity로 image, title, price 정보 넘겨주기
+                intent.putExtra("image", List[position].image)
+                intent.putExtra("title", List[position].title)
+                intent.putExtra("price", List[position].price)
+
+                startActivity(intent)
+            }
         }
 
 
