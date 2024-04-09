@@ -23,17 +23,8 @@ class DonutListFragment : Fragment() {
         // 뷰바인딩
         binding = FragmentDonutListBinding.inflate(inflater, container, false)
 
-        // 리스트 초기화
+
         val List = donutList(resources)
-
-
-
-
-
-
-
-
-
         val donutAdapter = DonutAdapter(List)
         binding.rv.adapter = donutAdapter     // 리사이클러뷰와 어뎁터 연결
 

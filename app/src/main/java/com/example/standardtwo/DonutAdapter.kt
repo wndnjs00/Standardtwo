@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.standardtwo.databinding.DonutListItemBinding
 
 
 // 리사이클러뷰 상속받음
@@ -15,24 +16,11 @@ class DonutAdapter(private val donutList : ArrayList<DonutDataModel>)
         var onItemClick : ((DonutDataModel) -> Unit)? = null
 
 
-    class DonutViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
 
-        // 레이아웃 id 가져옴
-//        val image : ImageView = itemView.findViewById(R.id.donut1)        // 이렇게 써도됨
-        val image = itemView.findViewById<ImageView>(R.id.donut1)
-        val title = itemView.findViewById<TextView>(R.id.item_title)
-        val price = itemView.findViewById<TextView>(R.id.item_price)
-
-        val empty_heart1 = itemView.findViewById<ImageView>(R.id.item_heart)
-        val full_heart1 = itemView.findViewById<ImageView>(R.id.item_heart2)
-
-    }
-
-
-    // 화면(레이아웃 연결)
+    // 화면(레이아웃 연결) - 바인딩 사용해서
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DonutViewHolder {
 
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.donut_list_item, parent, false)
+        val view = DonutListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return DonutViewHolder(view)
     }
 
@@ -73,5 +61,20 @@ class DonutAdapter(private val donutList : ArrayList<DonutDataModel>)
         }
 
     }
+
+
+    // 바인딩을 사용해서 id연결
+    inner class DonutViewHolder(val binding : DonutListItemBinding) : RecyclerView.ViewHolder(binding.root){
+
+        // 레이아웃 id 가져옴
+        val image = binding.donut1
+        val title = binding.itemTitle
+        val price = binding.itemPrice
+
+        val empty_heart1 = binding.itemHeart
+        val full_heart1 = binding.itemHeart2
+
+    }
+
 
 }
