@@ -1,5 +1,4 @@
 package com.example.standardtwo
-
 import android.content.Intent
 import android.content.res.Resources
 import android.os.Bundle

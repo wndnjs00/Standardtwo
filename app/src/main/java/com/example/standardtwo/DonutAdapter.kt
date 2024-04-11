@@ -1,10 +1,7 @@
 package com.example.standardtwo
-
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.standardtwo.databinding.DonutListItemBinding
 
@@ -13,6 +10,8 @@ import com.example.standardtwo.databinding.DonutListItemBinding
 class DonutAdapter(private val donutList : ArrayList<DonutDataModel>)
     : RecyclerView.Adapter<DonutAdapter.DonutViewHolder>(){
 
+
+    // 아이템 클릭을 위한 인터페이스 선언
     interface ItemClick{
         fun onClick(view : View, position: Int)
     }
@@ -68,7 +67,7 @@ class DonutAdapter(private val donutList : ArrayList<DonutDataModel>)
 
 
     // 바인딩을 사용해서 id연결
-    inner class DonutViewHolder(val binding : DonutListItemBinding) : RecyclerView.ViewHolder(binding.root){
+    inner class DonutViewHolder(binding : DonutListItemBinding) : RecyclerView.ViewHolder(binding.root){
 
         // 레이아웃 id 가져옴
         val image = binding.donut1
